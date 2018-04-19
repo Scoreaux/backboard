@@ -1,0 +1,6 @@
+$colTest: pink;
+
+.test {
+  background-color: $colTest;
+  font-size: 30px;
+}

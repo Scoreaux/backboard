@@ -1,0 +1,9 @@
+{
+  "appId": "com.dmarsh.backboard",
+  "productName": "BackBoard",
+  "asar": true,
+  "files": [
+    "dist/**/*",
+    "package.json"
+  ]
+}

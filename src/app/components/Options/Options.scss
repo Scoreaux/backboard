@@ -1,0 +1,126 @@
+.container {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: 1fr;
+  align-content: center;
+  padding-right: 4rem;
+
+  &:hover {
+    .toggle {
+      visibility: visible;
+    }
+  }
+
+  &.visible {
+    .toggle {
+      visibility: visible;
+    }
+
+    .content {
+      display: block;
+    }
+  }
+
+  .content {
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+  }
+
+  .toggle {
+    width: 2rem;
+    height: 4rem;
+    border-radius: 0 4rem 4rem 0;
+    background-color: white;
+    transform: translateY(-50%);
+    visibility: hidden;
+    align-self: center;
+  }
+}
+
+.textInput {
+  border: 2px solid #CCC;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  outline: none;
+  background-color: none;
+  width: 100%;
+
+  &:focus {
+    border-color: black;
+  }
+}
+
+.btn {
+  border: 2px solid #CCC;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-color: black;
+  }
+
+  &:active {
+    background-color: #eee;
+  }
+}
+
+.range {
+  -webkit-appearance: none;
+  background-color: none;
+  height: 2rem;
+  width: 100%;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: calc(-1rem + 1px);
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: #CCC;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: black;
+  }
+}
